@@ -1,0 +1,16 @@
+{
+    "contents" : "Codebook\n========================== \n\nTrain data were transformed into  data frame, train_data with 561 variables and 7352 observations\nTest data were transformed into  data frame, test_data with 561 variables and 2947 observations\nTrain and test activities numbers were coded as factors, train_activities and test_activities (1-6)\nSubjects were coded as factors, train activities and test_activities (1-30)\nActivities were coded as data frame of two variables: \"num\" as factor (1-6) and \"activity\" as factor of 6 levels, WALKING,WALKING_UPSTAIRS,WALKING_DOWNSTAIRS,SITTING,STANDING and LAYING\nTrain_data was transforemed into data frame, train1 with 562 variables by merging train_datat and train_activity\nTrain1 was transforemed into data frame, train2 with 563 variables by joining train2 and activities\nTrain3 is coded by dropping Column \"num\"\nCombined train data is coded into dataframe, train with 563 variables by merging train3 and subject (\"subject\", \"activity\", \"V1\",...)\nTest dataframe made same way\nTrain_data and test_data were combined into one dataframe, dataset with 563 variables and 10299 observations\nFeatures were coded as factor, features with 477 levels \"angle(tBodyAccJerkMean),gravityMean)\",..\nBeing not unique, features were coded as character vector features3 with 561 unique values\nFeatures were assigh as variables names in train_data and test_data\n\nDataset was transformed in tidy_dataset by filtering mean and standard deviation for each measure\nTidy_data set was summarized by subject and activity applying mean function to all variables.\nIts resulting data frame, summary data set with 88 variables (mean and std for each mesurement) for each subject and each activity type(30 subjects*6 activities)\n\n",
+    "created" : 1419182350531.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4240959248",
+    "id" : "2E373A3E",
+    "lastKnownWriteTime" : 1419188095,
+    "path" : "C:/Documents and Settings/Администратор/Рабочий стол/Kate/Coursera/Cleaning data/Project/courseproject-getdata/CodeBook.md",
+    "project_path" : "CodeBook.md",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "markdown"
+}

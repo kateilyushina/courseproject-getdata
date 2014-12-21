@@ -1,0 +1,16 @@
+{
+    "contents" : "Courseprogect getdata codebook\n========================== \n\nProject for coursera getting and cleaning data course (getdata-016)\n\nThe data set used for this analisis: Human Activity Recognition Using Smartphones Dataset\n\nFull description: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones\n\nIt can be downloaderd from here:\nhttps://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip \n\nThe dataset includes the following files:\n=========================================\n\n- 'README.txt'\n\n- 'features_info.txt': Shows information about the variables used on the feature vector.\n\n- 'features.txt': List of all features.\n\n- 'activity_labels.txt': Links the class labels with their activity name.\n\n- 'train/X_train.txt': Training set.\n\n- 'train/y_train.txt': Training labels.\n\n- 'test/X_test.txt': Test set.\n\n- 'test/y_test.txt': Test labels.\n\nThe following files are available for the train and test data. Their descriptions are equivalent. \n\n- 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. \n\n- 'train/Inertial Signals/total_acc_x_train.txt': The acceleration signal from the smartphone accelerometer X axis in standard gravity units 'g'. Every row shows a 128 element vector. The same description applies for the 'total_acc_x_train.txt' and 'total_acc_z_train.txt' files for the Y and Z axis. \n\n- 'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration. \n\n- 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. \n\nAnalysis:\n=========================================\n\nData is supposed to be your working directory\n\n",
+    "created" : 1419182021140.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "636169716",
+    "id" : "D65FAD6C",
+    "lastKnownWriteTime" : 1419187262,
+    "path" : "C:/Documents and Settings/Администратор/Рабочий стол/Kate/Coursera/Cleaning data/Project/courseproject-getdata/README.md",
+    "project_path" : "README.md",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "markdown"
+}

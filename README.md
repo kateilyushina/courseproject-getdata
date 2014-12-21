@@ -43,5 +43,4 @@ Analysis:
 =========================================
 
 Data is supposed to be your working directory
-Script does the following
 

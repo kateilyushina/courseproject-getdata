@@ -1,0 +1,16 @@
+{
+    "contents" : "## dyplr package is used. please install using install.packages(\"dplyr\")\nlibrary(dplyr)\n\n## read train data\n## read measures\ntrain_data <- read.table(\"./train/X_train.txt\", header=FALSE, sep=\"\")\n## read activities numbers\ntrain_activities <- read.table(\"./train/Y_train.txt\", header=FALSE, sep=\"\")\n## read subject data\nsubject_train<- read.table(\"./train/subject_train.txt\", header=FALSE, sep=\"\")\n\n## read test data\n## read measures\ntest_data <- read.table(\"./test/X_test.txt\", header=FALSE, sep=\"\")\n## read activities numbers\ntest_activities <- read.table(\"./test/Y_test.txt\", header=FALSE, sep=\"\")\n## read subject data\nsubject_test<- read.table(\"./test/subject_test.txt\", header=FALSE, sep=\"\")\n\n##ACTIVITIES\n## read activities names\nactivities<- read.table(\"./activity_labels.txt\", header=FALSE, sep=\"\")\n## assign names to columns\nnames(activities)<- c(\"num\", \"activity\")\n\n## Creating train dataset\n##change name in acivity df and subject df\nnames(train_activities)<- c(\"num\")\nnames(subject_train)<- c(\"subject\")\n## merge activities and data\ntrain1<- cbind(train_activities,train_data)\n## add activity labels\ntrain2<-inner_join(activities, train1, by=\"num\")\n## drop \"num\" column\ntrain3<- select(train2,-matches(\"num\"))\n## create train dataset\ntrain<- cbind(subject_train,train3)\n\n## Creating test dataset\n##change name in acivity df and subject df\nnames(test_activities)<- c(\"num\")\nnames(subject_test)<- c(\"subject\")\n## merge activities and data\ntest1<- cbind(test_activities,test_data)\n## add activity labels\ntest2<-inner_join(activities, test1, by=\"num\")\n## drop \"num\" column\ntest3<- select(test2,-matches(\"num\"))\n## create test dataset\ntest<- cbind(subject_test,test3)\n\n## Create one dataset\ndataset<- rbind(train,test)\n\n## FEATURES\n## read features names\nfeatures<- read.table(\"./features.txt\", header=FALSE, sep=\"\")\n## leave second column only\nfeatures2<- features[[2]]\n## there are duplications in the name set. make them unique\nfeatures3<- make.unique(as.character(features2))\n\n## assign names to our dataset\nnames(dataset)<- c(\"subject\",\"activity\",features3)\n\n## filter mean and standard deviation (std) columns\nmean_set<- select(dataset, contains(\"mean\"))\nstd_set<- select(dataset, contains(\"std\"))\n\n##combine mean and std datasets\ntidy_dataset<- cbind(dataset[,c(1,2)],mean_set,std_set)\n\n##create summary for each subject and activity\nby<- group_by(tidy_dataset, subject, activity)\nsummary_data_set<-summarise_each(by,funs(mean))\n## write dataset\nwrite.table(summary_data_set,\"summary_data_set.txt\", row.name=FALSE)",
+    "created" : 1419181877781.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2353614539",
+    "id" : "BAC10315",
+    "lastKnownWriteTime" : 1419185186,
+    "path" : "C:/Documents and Settings/Администратор/Рабочий стол/Kate/Coursera/Cleaning data/Project/courseproject-getdata/run_analysis.R",
+    "project_path" : "run_analysis.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
