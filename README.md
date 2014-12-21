@@ -1,9 +1,11 @@
-Courseprogect-getdata
-==========================
+Courseprogect getdata codebook
+========================== 
 
 Project for coursera getting and cleaning data course (getdata-016)
 
 The data set used for this analisis: Human Activity Recognition Using Smartphones Dataset
+
+Full description: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
 It can be downloaderd from here:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
@@ -36,4 +38,10 @@ The following files are available for the train and test data. Their description
 - 'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration. 
 
 - 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
+
+Analysis:
+=========================================
+
+Data is supposed to be your working directory
+Script does the following
 
