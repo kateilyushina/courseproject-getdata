@@ -44,3 +44,15 @@ Analysis:
 
 Data is supposed to be your working directory
 
+The script does the following:
+* Creates two data sets for train and test data
+* Merges them in one data set
+* Names all variables in resulting data set with measures
+* Filters mean and std variables for all measures
+* Calculates mean for all the measures for each subject and activity
+* Writes the resulting dataset
+
+
+
+
+
